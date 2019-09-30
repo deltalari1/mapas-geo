@@ -1,0 +1,144 @@
+/* IMPORTAÇÃO DE FONTES */
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+/* SECTION 1 */
+html, body{
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	font-size: 16px;
+}
+
+.intro {
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	background: url("https://i.imgur.com/rJxTuDe.jpg") no-repeat 50% 50%;
+	display: table;
+	top: 0;
+}
+
+.intro .interior {
+	display: table-cell;
+	vertical-align: middle;
+	width: 100%;
+	max-width: none;
+}
+
+.conteudo {
+	max-width: 500px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* TÍTULO E BOTÃO */
+
+.conteudo h1 {
+	font-family: "Raleway", sans-serif;
+	color: #F9F3F4;
+	font-size: 200%
+}
+
+#button {
+	border-radius: 9px;
+	font-family: "Oswald", sans-serif;
+	color: #F9F3F4;
+	font-size: 160%;
+	padding: 10px 20px;
+	border: solid #F9F3F4 3px;
+	text-transform: uppercase;
+	text-decoration: none;
+}
+
+/* PARÁGRAFO */
+
+p {
+	font-size: 160%;
+	line-height: 210%;
+	text-align: justify;
+	margin: 3%;
+	font-family: "Oswald", sans-serif;
+}
+
+/* SECTION 2 */
+#down {
+	height: 100%
+}
+
+/* DROPDOWN */ 
+body {
+    background-color: #F1F2F1;
+    text-align: center;
+}
+
+.nav {
+	display: block;
+	font: 13px "Raleway", sans-serif;
+	text-transform: uppercase;
+	margin: 0; 
+	padding: 0;
+}
+
+.nav li {
+    display: inline-block;
+    list-style: none;
+}
+
+.nav .button-dropdown {
+    position: relative;
+}
+
+.nav li a {
+    display: block;
+    color: #333;
+    background-color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.nav li a span {
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 10px;
+    color: #999;
+}
+
+.nav li a:hover, .nav li a.dropdown-toggle.active {
+    background-color: #289acc;
+    color: #fff;
+}
+
+.nav li a:hover span, .nav li a.dropdown-toggle.active span {
+    color: #fff;
+}
+
+.nav li .dropdown-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    margin-top: 3px;
+    text-align: left;
+}
+
+.nav li .dropdown-menu.active {
+    display: block;
+}
+
+.nav li .dropdown-menu a {
+    width: 150px;
+}
+
+/* MAPAS */
+.titulomapas {
+	font-family: "Oswald", sans-serif;
+	text-transform: uppercase;
+	color: #333;
+}
+
+.mapas {
+	padding-top: 1%;
+}

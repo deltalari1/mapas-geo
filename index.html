@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Mapas - RS</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="javascript" src="script.js"></script>
+	<link >
+</head>
+
+<body>
+	<section class="intro"> <!--Página inicial-->
+		<div class="interior">
+			<div class="conteudo">
+				<h1>Mapas do Rio Grande do Sul</h1>
+				<a id="button" href="#down">Explore</a>
+			</div>
+		</div>
+	</section>
+
+	<section id="down"> <!--Seleção dos mapas-->
+		<ul class="nav"> <!--Dropdown-->
+			<li class="button-dropdown"> <!--Climatologia-->
+				<a href="javascript:void(0)" class="dropdown-toggle">
+					Climatologia <span>▼</span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="funcprecipitaçaomedia()">
+							Precipitação média
+						</a>
+					</li>
+
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="functemperaturamedia()">
+							Temperatura média
+						</a>
+					</li>
+
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="funcverao()">
+							Temperatura - Verão
+						</a>
+					</li>
+
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="funcoutono()"> 
+							Temperatura - Outono
+						</a>
+		      			</li>
+
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="funcinverno()">
+							Temperatura - Inverno
+						</a>
+					</li>
+
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="funcprimavera()">
+							Temperatura - Primavera
+						</a>
+					</li>
+					<a href="javascript:void(0)" type="button" onClick="funatmosfericos()">
+						Sistemas atmosféricos
+					</a>
+				</li>
+
+				</ul>
+
+		  	<li class="button-dropdown"> <!--Meio ambiente-->
+				<a href="javascript:void(0)" class="dropdown-toggle">
+					Meio Ambiente <span>▼</span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="funcaltura()">
+							Hipsometria - Altitude
+						</a>
+					</li>
+
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="funhidografia()">
+							Hidrografia - Bacias e subacias
+						</a>
+					</li>
+
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="funmorfologicas()"> 
+							Unidades morfológicas - Relevo
+						</a>
+		      			</li>
+
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="funcunidades()">
+							Unidades de conservação
+						</a>
+					</li>
+				</ul>
+
+		  	<li class="button-dropdown">
+				<a href="javascript:void(0)" class="dropdown-toggle">
+					Demografia <span>▼</span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="funcdemografia()">
+							Densidade demográfica
+						</a>
+					</li>
+
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="funcpopulaçao()"> 
+							Distribuição da população 
+						</a>
+		      			</li>
+				</ul>
+			</li>
+
+		  	<li class="button-dropdown">
+				<a href="javascript:void(0)" class="dropdown-toggle">
+					Divisão (?)<span>▼</span>
+				</a>
+				<ul class="dropdown-menu">
+					<li>
+						<a href="javascript:void(0)" type="button" onClick="funcdivisao()">
+							Divisão municipal e hierarquia urbana
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+
+		<!--Div's com os mapas-->
+		<!--Climatologia-->
+			<!--Verão-->
+		<div id="verao" style='display:none' align="center">
+			<img class="mapas" src="https://i.imgur.com/ZkTRfjm.png" height="500" width="500"/> 
+			<h1 class="titulomapas"> Temperatura - Verão </h1>
+		</div>
+			<!--Inverno-->
+		<div id='inverno' style='display:none' align="center">
+			<img class="mapas" src="https://i.imgur.com/dFRDZuW.png" height="500" width="500"/>
+	 		<h1 class="titulomapas"> Temperatura - Inverno </h1>
+		</div>
+			<!--Outono-->
+		<div id='outono' style='display:none' align="center">
+			<img class="mapas" src="https://i.imgur.com/5vYfUNN.png" height="500" width="500"/>
+	 		<h1 class="titulomapas"> Temperatura - Outono </h1>
+		</div>
+			<!--Primavera-->
+		<div id='primavera' style='display:none' align="center">
+			<img class="mapas" src="https://i.imgur.com/BkZcea4.png" height="500" width="500"/>
+			
+	 		<h1 class="titulomapas"> Temperatura - Primavera </h1>
+		</div>
+		<div id='precipitaçaomedia' style='display:none' align="center">
+			<img class="mapas" src="https://i.imgur.com/38uFuyq.png" height="500" width="500"/>
+			
+	 		<h1 class="titulomapas"> Precipitação média anual </h1>
+	 	</div>
+	 	<div>
+	 	<div id='temperaturamedia' style='display:none' align="center">
+			<img class="mapas" src="https://i.imgur.com/oDt5ggn.png" height="500" width="500"/>
+			
+	 		<h1 class="titulomapas"> Temperatura média anual </h1>
+	 	</div>
+	 	<div>
+	 		 	<div id='atmosféricos' style='display:none' align="center">
+			<img class="mapas" src="https://i.imgur.com/SCZFQlF.jpg" height="500" width="500"/>
+			
+	 		<h1 class="titulomapas"> Sistemas atmosféricos </h1>
+	 	</div>
+	 	<div>
+
+		<!--Meio ambiente-->
+			 <div id='Altura' style='display:none' align="center">
+			<img class="mapas" src="https://i.imgur.com/5dqfKN2.png" height="500" width="500"/>
+			
+	 		<h1 class="titulomapas"> Hipsometria- altitude </h1>
+	 	</div>
+	 	<div>
+	 				 <div id='hidrografias' style='display:none' align="center">
+			<img class="mapas" src="https://i.imgur.com/4xehwpm.png " height="500" width="500"/>
+			
+	 		<h1 class="titulomapas"> Hidrografia - bacias e subacias </h1>
+	 		 	</div>
+	 	<div>
+	 				 <div id='morfológicas' style='display:none' align="center">
+			<img class="mapas" src=" https://i.imgur.com/Y7NuSHF.png " height="500" width="500"/>
+			
+	 		<h1 class="titulomapas"> Unidades morfológicas - relevo </h1>
+	 		 		 	</div>
+	 	<div>
+	 				 <div id='unidade' style='display:none' align="center">
+			<img class="mapas" src="https://i.imgur.com/kIG5R9Y.png  " height="500" width="500"/>
+			
+	 		<h1 class="titulomapas"> Unidades de conservação </h1>
+
+	 	<!-- demografia -->
+	 		 		 	</div>
+	 	<div>
+	 				 <div id='demografia' style='display:none' align="center">
+			<img class="mapas" src=" https://i.imgur.com/X0TM75X.png  " height="500" width="500"/>
+			
+	 		<h1 class="titulomapas"> Densidade demográfica </h1>
+	 		 		 		 	</div>
+	 	<div>
+	 				 <div id='população' style='display:none' align="center">
+			<img class="mapas" src=" https://i.imgur.com/rmP4cQ5.png " height="500" width="500"/>
+	 		<h1 class="titulomapas"> Distribução da população (2010) </h1>
+	 	</div>
+       <!--- Divisão (?) -->
+	 	<div>
+	 				 <div id='Divisão' style='display:none' align="center">
+			<img class="mapas" src="  https://i.imgur.com/vaTjikB.png  " height="500" width="500"/>
+	 		<h1 class="titulomapas"> Divisão municipal e hierarquia urbana </h1>
+</body>
+
+</html>
